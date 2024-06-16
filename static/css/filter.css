@@ -1,0 +1,255 @@
+/* Estilos generales para toda la aplicación */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white; /* Color de texto blanco por defecto */
+    background-image: url('../images/fondo07.png');
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+    
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(13, 12, 12, 0.77); /* Fondo semi-transparente oscuro */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen en el contenedor */
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+}
+
+.controls {
+    width: 600px; /* Ajusta el ancho según tus preferencias */
+    padding: 20px;
+    border-right: 1px solid; /* Borde sutil a la derecha */
+    /*background-color: rgba(13, 12, 12, 0.77); /* Fondo semi-transparente oscuro */
+    
+}
+
+.visualization {
+    flex: 2; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   /* background-color: rgba(13, 12, 12, 0.77); /* Fondo semi-transparente oscuro */
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+}
+
+#filter-controls {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#filter-controls fieldset {
+    border: 1px solid #ccc; /* Borde gris claro */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+#filter-controls legend {
+    font-weight: bold;
+    padding: 0 5px;
+    font-size: 30px;
+}
+
+#filter-controls label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#filter-controls input,
+#filter-controls select {
+    width: calc(100% - 18px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    text-align: left;
+}
+
+#filter-controls p { /* Para el texto de ayuda */
+    font-size: 12px;
+    color: #6c757d;
+    margin-top: 0;
+}
+
+#filter-controls button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+}
+
+#filter-controls button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.graph-section {
+    margin-bottom: 20px;
+    height: 100%; /* Asegura que cada sección de gráficos ocupe todo el espacio disponible */
+    display: flex; /* Usar flexbox para alinear imágenes */
+    flex-wrap: wrap; /* Permitir que las imágenes se envuelvan en varias líneas */
+    justify-content: space-around; /* Distribuir las imágenes uniformemente */
+    gap: 10px; /* Espacio entre imágenes */
+    width: 95%;
+    overflow-y: auto; /* Permitir desplazamiento vertical */
+}
+
+.graph-section h3 {
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 38px;
+    text-align: center;
+}
+
+#graph-filter-response {
+    width: 100%;
+    height: 650px;
+}
+
+#graph-filtered-signal {
+    width: 100%;
+    height: 300px;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+/* Estilos para la barra de desplazamiento (opcional) */
+.visualization::-webkit-scrollbar {
+    width: 8px;
+}
+
+.visualization::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.visualization::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.visualization::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.titulo {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#graphs-container {
+    max-height: 800px;
+    overflow-y: auto;
+    margin-top: 15vh;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Desactivar el estilo por defecto de los navegadores en Webkit */
+    width: 80%; /* Ancho del control deslizante */
+    height: 10px; /* Altura del control deslizante */
+    background: #ddd; /* Color de fondo del control deslizante */
+    outline: none; /* Eliminar el borde del control deslizante */
+    opacity: 0.7; /* Opacidad del control deslizante */
+    -webkit-transition: .2s; /* Transición suave en Webkit */
+    transition: opacity .2s; /* Transición suave en otros navegadores */
+    border-radius: 5px; /* Bordes redondeados */
+    margin: 10px auto; /* Márgenes para centrar */
+    display: block; /* Convertir en elemento de bloque */
+}
+
+input[type="range"]:hover {
+    opacity: 1; /* Aumentar la opacidad al pasar el mouse */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Desactivar el estilo por defecto del pulgar en Webkit */
+    appearance: none; /* Desactivar el estilo por defecto del pulgar */
+    width: 20px; /* Ancho del pulgar */
+    height: 20px; /* Altura del pulgar */
+    background: #fdb4ea; /* Color del pulgar */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    border-radius: 50%; /* Pulgar redondeado */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra del pulgar */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px; /* Ancho del pulgar en Firefox */
+    height: 20px; /* Altura del pulgar en Firefox */
+    background: #007bff; /* Color del pulgar en Firefox */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse en Firefox */
+    border-radius: 50%; /* Pulgar redondeado en Firefox */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra del pulgar en Firefox */
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px; /* Ancho del pulgar en IE */
+    height: 20px; /* Altura del pulgar en IE */
+    background: #007bff; /* Color del pulgar en IE */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse en IE */
+    border-radius: 50%; /* Pulgar redondeado en IE */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra del pulgar en IE */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%; /* Ancho de la pista */
+    height: 10px; /* Altura de la pista */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    background: #ddd; /* Color de la pista */
+    border-radius: 5px; /* Bordes redondeados de la pista */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra de la pista */
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%; /* Ancho de la pista en Firefox */
+    height: 10px; /* Altura de la pista en Firefox */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse en Firefox */
+    background: #ddd; /* Color de la pista en Firefox */
+    border-radius: 5px; /* Bordes redondeados de la pista en Firefox */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra de la pista en Firefox */
+}
+
+input[type="range"]::-ms-track {
+    width: 100%; /* Ancho de la pista en IE */
+    height: 10px; /* Altura de la pista en IE */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse en IE */
+    background: transparent; /* Fondo transparente en IE */
+    border-color: transparent; /* Bordes transparentes en IE */
+    color: transparent; /* Color transparente en IE */
+}
+
+input[type="range"]::-ms-fill-lower {
+    background: #ddd; /* Color de la pista inferior en IE */
+    border-radius: 5px; /* Bordes redondeados de la pista inferior en IE */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra de la pista inferior en IE */
+}
+
+input[type="range"]::-ms-fill-upper {
+    background: #ddd; /* Color de la pista superior en IE */
+    border-radius: 5px; /* Bordes redondeados de la pista superior en IE */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Sombra de la pista superior en IE */
+}
