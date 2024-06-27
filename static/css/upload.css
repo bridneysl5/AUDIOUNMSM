@@ -1,18 +1,21 @@
 /* Estilos específicos para la página de carga */
 body {
     
-    background-color: rgba(13, 12, 12, 0.77); /* Fondo semi-transparente oscuro */
-}
-.container {
-    display: flex; /* Utilizamos flexbox para el diseño de dos columnas */
-    height: auto; /* Altura completa de la ventana */
-    background-image: url('../images/fondo02.gif');
+
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/imagen1.jpeg');
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center center; /* Centra la imagen en el contenedor */
-    
-    
 }
+.container {
+    background-color: rgba(42, 41, 41, 0.066);
+    display: flex; /* Utilizamos flexbox para el diseño de dos columnas */
+    height: auto; /* Altura completa de la ventana */
+
+}
+
 
 .controls {
     flex: 1;
@@ -28,8 +31,8 @@ body {
     margin-bottom: 20px;
     text-align: center;
     margin-top: 20px;
-    height: 220px;
-    padding-top: 130px;
+    height: 240px;
+    padding-top: 30px;
 }
 
 .section h3 {

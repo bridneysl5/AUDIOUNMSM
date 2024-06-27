@@ -3,9 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Evita el scroll en el body */
+    /*overflow: hidden; /* Evita el scroll en el body */
    /* background-color: #000; /* Fondo negro */
-    color: white; /* Color de texto blanco por defecto */
+    
+    background-image: url('../images/imagen1.jpeg');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    /*background-position: center center; /* Centra la imagen en el contenedor */
 }
 
 /* Contenedor principal que cubre toda la pantalla */
@@ -41,42 +45,68 @@ body {
 /* Contenedor del contenido principal */
 .content {
     
-    background-color: rgb(42 41 41 / 57%);/* Fondo semi-transparente oscuro */
+    background-color: rgba(42, 41, 41, 0);/* Fondo semi-transparente oscuro */
     padding: 30px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);/* Sombra más pronunciada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);/* Sombra más pronunciada */
 }
 
 /* Estilos para los títulos */
 .course-title {
     font-size: 55px;
-    margin-bottom: 5px;
+    background-color: rgb(201, 158, 83);
+    color:black;
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom: -35px;
     font-weight: bold;
+    
 }
 
 .topic {
     font-size: 35px;
+    color:black;
+    background-color: rgb(201, 158, 83);
+    
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
     margin-bottom: 10px;
 }
 
 .professor {
     font-size: 25px;
+    color:black;
+    background-color: rgb(201, 158, 83);
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
     margin-bottom: 20px;
 }
 
 /* Estilos para la lista de integrantes */
 .members {
-    text-align: left; /* Alineación a la izquierda para la lista */
+    text-align: center; /* Alineación a la izquierda para la lista */
     font-size: 20px; /* Tamaño de fuente más pequeño */
     line-height: 1.4; /* Interlineado más amplio */
+    color:black;
+
+    font-style: italic;
+    font-family:'Times New Roman', Times, serif;
     font-weight: bold;
+    display: inline-grid;
+    
 }
 
 .members p {
     margin: 5px 0;
-    color: red;
+    color: rgb(9, 9, 9);
+    background-color: rgb(201, 158, 83);
+    width: 500px;
+    padding: 0px;
+    
 }
+
+
 
 /* Estilos para el botón */
 #start-button {
